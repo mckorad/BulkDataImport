@@ -1,0 +1,39 @@
+<html>
+    <body style="background-color: white; margin: 0px;">
+
+    
+    <div style="background-color: rgb(61,141,255); height: 120px; width: 100%; position: absolute; left: 0px; top: 0px">
+	<img src="images/OpenMRS_2008_logo_web.jpg" style="height: 150px;">
+	</div>
+	
+	<table style="margin-top: 0px; margin-left: auto; margin-right: auto;position: absolute; left: 600px; top: 35px">
+	<tr><td align=center>
+	<img width=85% src="images/bulk_data_import.png">
+	</td></tr>
+	</table>
+         <br><br><br><br><br><br><br><br>
+          <h2> Place Your data here!</h2>
+          <form action="servlet1" method="POST" >
+          <textarea name = "data" cols="80" rows="5" wrap="hard" value="enter CSV or TSV data here">enter CSV or TSV data here</textarea>
+          <p>
+              <input type="radio" name="action" value="csvContent" />Submit CSV
+              <input type="radio" name="action" value="tsvContent" />Submit TSV
+        
+         </P>
+         <p>
+            <input type="checkbox" name="setoverwritedata" value="selected">Override Existing Data<br>
+         </P>
+         <p> 
+        <input type="submit" name="Submit" value="Submit"style="height: 25px; width: 200px" />
+        <input type="reset" name="Reset" value="Reset form" />
+        </p>
+       </form>
+       
+       <form ENCTYPE='multipart/form-data' method='POST' action="exceluploader"> 
+         <input type="checkbox" name="setoverwritedata1" value="selected" />Override Existing Data<br>
+         <input type='file' NAME='spreadsheet'>
+         <input type='submit' name="Submit" VALUE='submit'>
+         </form>
+         
+       </body>
+</html>
